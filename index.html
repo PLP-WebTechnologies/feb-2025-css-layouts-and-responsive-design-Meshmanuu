@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr; /* Single column by default */
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .content-section {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* Media Queries for Responsiveness */
+
+        @media (min-width: 768px) { /* Tablet and larger */
+            .container {
+                grid-template-columns: 1fr 1fr; /* Two columns */
+            }
+        }
+
+        @media (min-width: 1024px) { /* Desktop and larger */
+            .container {
+                grid-template-columns: 1fr 1fr 1fr; /* Three columns */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="content-section">
+            <h2>Section 1</h2>
+            <p>This is the first section of content.</p>
+        </div>
+        <div class="content-section">
+            <h2>Section 2</h2>
+            <p>This is the second section. </p>
+        </div>
+        <div class="content-section">
+            <h2>Section 3</h2>
+            <p>This is the third section.</p>
+        </div>
+        <div class="content-section">
+            <h2>Section 4</h2>
+            <p>This is the fourth section. </p>
+        </div>
+        <div class="content-section">
+            <h2>Section 5</h2>
+            <p>This is the fifth section. </p>
+        </div>
+        <div class="content-section">
+            <h2>Section 6</h2>
+            <p>This is the sixth section.</p>
+        </div>
+    </div>
+</body>
+</html>
